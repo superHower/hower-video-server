@@ -34,3 +34,7 @@ package-lock.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+application.dev.yml
+application.prod.yml
+code-gen.yml

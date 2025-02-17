@@ -66,7 +66,7 @@ export class AccountRoleService {
             };
           });
           // 创建
-          const data = queryRunner.manager.create<AccountRoleEntity>(
+          const data = queryRunner.manager.create<AccountRoleEntity, Partial<AccountRoleEntity>>(
             AccountRoleEntity,
             createAccountRoleData
           );
@@ -93,7 +93,7 @@ export class AccountRoleService {
           };
         });
         // 创建
-        const data = queryRunner.manager.create<AccountRoleEntity>(
+        const data = queryRunner.manager.create<AccountRoleEntity, Partial<AccountRoleEntity>>(
           AccountRoleEntity,
           createAccountRoleData
         );

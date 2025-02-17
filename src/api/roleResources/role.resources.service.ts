@@ -73,10 +73,10 @@ export class RoleResourcesService {
             };
           });
           // 创建
-          const data = queryRunner.manager.create<RoleResourcesEntity>(
+          const data = queryRunner.manager.create<
             RoleResourcesEntity,
-            createRoleResourcesData
-          );
+            Partial<RoleResourcesEntity>
+          >(RoleResourcesEntity, createRoleResourcesData);
           await queryRunner.manager.save<RoleResourcesEntity>(data);
         }
         await queryRunner.commitTransaction(); // 提交事务
